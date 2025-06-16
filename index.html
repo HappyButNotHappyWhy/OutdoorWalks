@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/b8e52178c7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OutDoor Views</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <video id="background-video" autoplay muted loop>
+        <source src="images/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <button id="bg-toggle-btn">
+        <i class="fa-solid fa-moon"></i> Black Background
+    </button>
+    <script>
+        const btn = document.getElementById('bg-toggle-btn');
+        const video = document.getElementById('background-video');
+        let blackBg = false;
+        btn.addEventListener('mouseenter', () => {
+            btn.style.background = '#7ED957';
+            btn.style.color = '#222';
+        });
+        btn.addEventListener('mouseleave', () => {
+            btn.style.background = 'rgba(34, 34, 34, 0.85)';
+            btn.style.color = '#7ED957';
+        });
+        btn.addEventListener('click', function() {
+            if (!blackBg) {
+                video.style.display = 'none';
+                document.body.style.background = 'black';
+                btn.innerHTML = '<i class="fa-solid fa-video"></i> Show Video Background';
+                blackBg = true;
+            } else {
+                video.style.display = '';
+                document.body.style.background = '';
+                btn.innerHTML = '<i class="fa-solid fa-moon"></i> Black Background';
+                blackBg = false;
+            }
+        });
+    </script>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li style="list-style: none; padding: 0; margin: 0;">
+                    <a href="index.html" style="display: flex; align-items: center; padding: 0; margin: 0; justify-content: flex-start;">
+                        <img src="images/Logo_Nav.png" alt="Outdoor Views Logo" style="height:40px; margin-right:10px; padding: 0; margin: 0;">
+                        <span style="font-size: 20px; color: #7ED957; padding: 0; margin: 0;">Outdoor Views</span>
+                    </a>
+                </li>
+                <li><a href="index.html"><i class="fa-solid fa-house" style="color: #7ED957;"></i> Home</a></li>
+                <li><a href="gallery.html"><i class="fa-solid fa-video" style="color: #7ED957;"></i> Videos</a></li>
+                <li><a href="about.html"><i class="fa-solid fa-address-card" style="color: #7ED957;"></i> About Us</a></li>
+                <li><a href="contact.html"><i class="fa-solid fa-envelope" style="color: #7ED957;"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="Logo_home">
+        <img src="images/Logo_big.png" alt="Outdoor Views Logo" style="width: 250px; height: 250px;">
+    </div>
+    <main class="main-home">
+        <h1 style="text-shadow: 0 0 1px #ffffff, 0 0 5px #ffffff, 0 0 10px #000000; font-size: 60px;">
+            <span style="color: #7ED957;">Outdoor Views</span></h1>
+        <p style=" font-size: 30px; text-shadow: 0 0 10px #ffffff, 0 0 10px #000000;">
+            <i class="fa-solid fa-leaf" style="color: #7ED957; font-size: 24px;"></i>
+            Discover the beauty of nature through immersive videos.<br>
+            Experience virtual walks in stunning locations around New Zealand.<br>
+            Whether it's forests, mountains, or cityscapes, experience it all from the comfort of your home.
+        </p>
+        <p style="font-size: 35px; text-shadow: 0 0 10px #000000;">Connect With <span style="color: greenyellow;">Nature</span> and Explore the World from Home</p>
+        </p>
+        </section>
+        <section id="Gallery">
+            <h2 style="text-shadow: 0 0 2.5px #000000;">Featured Videos</h2>
+            <div class="video-home" style="display: flex; gap: 10px; justify-content: center;">
+                <div>
+                    <iframe width="450" height="250" src="https://www.youtube.com/embed/T5PN33xCRfA" allowfullscreen="true"></iframe>
+                    <p style="text-shadow: 0 0 10px #ffffff, 0 0 10px #000000;">Walk in the Woods</p>
+                </div>
+                <div>
+                    <iframe width="450" height="250" src="https://www.youtube.com/embed/T5PN33xCRfA" allowfullscreen="true"></iframe>
+                    <p style="text-shadow: 0 0 10px #ffffff, 0 0 10px #000000;">City Exploration</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Outdoor Views</p>
+        </footer>
+    </body>
+</html>

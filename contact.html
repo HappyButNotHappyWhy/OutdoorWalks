@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/b8e52178c7.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background:  url('images/background_contact.jpg');
+            background-size: cover;
+        }
+    </style>
+    <button id="bg-toggle-btn">
+        <i class="fa-solid fa-moon"></i> Black Background
+    </button>
+    <script>
+        const btn = document.getElementById('bg-toggle-btn');
+        let blackBg = false;
+        btn.addEventListener('mouseenter', () => {
+            btn.style.background = '#7ED957';
+            btn.style.color = '#222';
+        });
+        btn.addEventListener('mouseleave', () => {
+            btn.style.background = 'rgba(34, 34, 34, 0.85)';
+            btn.style.color = '#7ED957';
+        });
+        btn.addEventListener('click', function() {
+            if (!blackBg) {
+                document.body.style.background = 'black';
+                btn.innerHTML = '<i class="fa-solid fa-video"></i> Show Image Background';
+                blackBg = true;
+            } else {
+                document.body.style.background = '';
+                btn.innerHTML = '<i class="fa-solid fa-moon"></i> Black Background';
+                blackBg = false;
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li style="list-style: none; padding: 0; margin: 0;">
+                    <a href="index.html" style="display: flex; align-items: center; padding: 0; margin: 0; justify-content: flex-start;">
+                        <img src="images/Logo_Nav.png" alt="Outdoor Views Logo" style="height:40px; margin-right:10px; padding: 0; margin: 0;">
+                        <span style="font-size: 20px; color: #7ED957; padding: 0; margin: 0;">Outdoor Views</span>
+                    </a>
+                </li>
+                <li><a href="index.html"><i class="fa-solid fa-house" style="color: #7ED957;"></i> Home</a></li>
+                <li><a href="gallery.html"><i class="fa-solid fa-video" style="color: #7ED957;"></i> Videos</a></li>
+                <li><a href="about.html"><i class="fa-solid fa-address-card" style="color: #7ED957;"></i> About Us</a></li>
+                <li><a href="contact.html"><i class="fa-solid fa-envelope" style="color: #7ED957;"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main class="main-contact">
+        <section id="contact-page">
+            <h1>Contact Us</h1>
+            <p>Have questions or suggestions? We'd love to hear from you always!</p>
+            <form id="contact-form" action="https://formsubmit.co/safalthapa65@gmail.com" method="POST">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Outdoor Views</p>
+        </footer>
+    </body>
+</html>
