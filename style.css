@@ -113,7 +113,7 @@ nav a:hover {
 .main-about {
     font-size: 20px;
     padding: 20px;
-    max-width: 1500px;
+    max-width: 960px;
     margin: 100px auto;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 15px;
